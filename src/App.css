@@ -1,38 +1,123 @@
-.App {
+:root {
+  :root {
+    --gray: #1f2937;
+    --red: #991b1b;
+    --yellow: #92400e;
+    --green: #065f46;
+    --blue: #1e40af;
+    --indigo: #3730a3;
+    --purple: #5b21b6;
+    --pink: #9d174d;
+
+    --gray-bg: #f3f4f6;
+    --red-bg: #fee2e2;
+    --yellow-bg: #fef3c7;
+    --green-bg: #d1fae5;
+    --blue-bg: #dbeafe;
+    --indigo-bg: #e0e7ff;
+    --purple-bg: #ede9fe;
+    --pink-bg: #fce7f3;
+
+    --lightblue: #1e90ff;
+    --white: #ffffff;
+  }
+}
+
+h1.title {
+  font-size: 36px;
+  line-height: 1;
+  color: #000000;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3.title {
+  font-size: 20px;
+  line-height: 0.7;
+  color: #5E5D5D;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  font-family: 'Permanent Marker', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.square--title {
+  grid-area: square-heading;
+}
+
+.badges--container>div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: .8em 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.square--container {
+  grid-area: square-badges;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+  background: var(--gray-bg);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--gray);
+}
+
+.badge.pill {
+  border-radius: 12px;
+}
+
+.badge.red {
+  background-color: var(--red-bg);
+  color: var(--red);
+}
+
+.badge.yellow {
+  background-color: var(--yellow-bg);
+  color: var(--yellow);
+}
+
+.badge.green {
+  background-color: var(--green-bg);
+  color: var(--green);
+}
+
+.badge.blue {
+  background-color: var(--blue-bg);
+  color: var(--blue);
+}
+
+.badge.indigo {
+  background-color: var(--indigo-bg);
+  color: var(--indigo);
+}
+
+.badge.pink {
+  background-color: var(--pink-bg);
+  color: var(--pink);
+}
+
+.square--title,
+.pill--title {
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.pill--title {
+  grid-area: pill-heading;
+}
+
+.pill--container {
+  grid-area: pill--badges;
+}
+
+.badge.pill {
+  border-radius: 12px;
 }
