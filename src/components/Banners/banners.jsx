@@ -2,19 +2,37 @@ import React from "react";
 import Banner from "./banner";
 
 export default function Banners() {
+  const types = ["success", "warning", "error", "neutral"];
+
   return (
-    <div>
+    <div className="banners">
       <h1 className="banner-title">Banners</h1>
       <h3 className="banner-multiline">Text and title</h3>
 
-      <div>
-        <h3 className="banner-success-title">Success</h3>
-
-        <div className="banner-container">
-          <div className="banner-container-title">title</div>
-          <br/>
-          <div className="banner-container-text">text</div>
-        </div>
+      <div className="multiline-banners">
+        {types.map((type) => (
+          <div className="banner-container">
+            <h3 classnName="title banner-containter-title">
+              {type.toUpperCase()}
+            </h3>
+            <Banner className="mult" type={type}>
+              <div className="banner-container-text">
+                <h5>
+                  {type === "success"
+                    ? "Congratulation"
+                    : type === "warning"
+                    ? "Warning"
+                    : type === "error"
+                    ? "Error"
+                    : type === "neutral"
+                    ? "It is ok ... really is"
+                    : ""}
+                </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.</p>
+              </div>
+            </Banner>
+          </div>
+        ))}
       </div>
     </div>
   );
