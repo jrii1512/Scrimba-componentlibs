@@ -1,26 +1,24 @@
 :root {
-  :root {
-    --gray: #1f2937;
-    --red: #991b1b;
-    --yellow: #92400e;
-    --green: #065f46;
-    --blue: #1e40af;
-    --indigo: #3730a3;
-    --purple: #5b21b6;
-    --pink: #9d174d;
+  --gray: #1f2937;
+  --red: #991b1b;
+  --yellow: #92400e;
+  --green: #065f46;
+  --blue: #1e40af;
+  --indigo: #3730a3;
+  --purple: #5b21b6;
+  --pink: #9d174d;
 
-    --gray-bg: #f3f4f6;
-    --red-bg: #fee2e2;
-    --yellow-bg: #fef3c7;
-    --green-bg: #d1fae5;
-    --blue-bg: #dbeafe;
-    --indigo-bg: #e0e7ff;
-    --purple-bg: #ede9fe;
-    --pink-bg: #fce7f3;
+  --gray-bg: #f3f4f6;
+  --red-bg: #fee2e2;
+  --yellow-bg: #fef3c7;
+  --green-bg: #d1fae5;
+  --blue-bg: #dbeafe;
+  --indigo-bg: #e0e7ff;
+  --purple-bg: #ede9fe;
+  --pink-bg: #fce7f3;
 
-    --lightblue: #1e90ff;
-    --white: #ffffff;
-  }
+  --lightblue: #1e90ff;
+  --white: #ffffff;
 }
 
 h1.title {
@@ -33,27 +31,27 @@ h1.title {
 h3.title {
   font-size: 20px;
   line-height: 0.7;
-  color: #5E5D5D;
+  color: #5e5d5d;
 }
 
 .title {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
-
-.square--title {
+.square-title {
   grid-area: square-heading;
 }
 
-.badges--container>div {
+.badges-container > div {
   display: flex;
+  margin-left:10px;
   flex-flow: row wrap;
-  justify-content: center;
-  gap: .8em 1em;
+  
+  gap: 0.8em 1em;
 }
 
-.square--container {
-  grid-area: square-badges;
+.square-container {
+  grid-area: square--badges;
 }
 
 .badge {
@@ -104,17 +102,17 @@ h3.title {
   color: var(--pink);
 }
 
-.square--title,
-.pill--title {
-    align-self: center;
-    justify-self: flex-end;
+.square-title,
+.pill-title {
+  align-self: center;
+  justify-self: flex-end;
 }
 
-.pill--title {
+.pill-title {
   grid-area: pill-heading;
 }
 
-.pill--container {
+.pill-container {
   grid-area: pill--badges;
 }
 
