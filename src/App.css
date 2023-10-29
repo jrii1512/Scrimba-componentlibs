@@ -44,14 +44,71 @@ h3.title {
 
 .badges-container > div {
   display: flex;
-  margin-left:10px;
+  margin-left: 10px;
   flex-flow: row wrap;
-  
+
   gap: 0.8em 1em;
 }
 
 .square-container {
   grid-area: square--badges;
+}
+
+.banner-title {
+  color: #000;
+  font-family: Permanent Marker;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 96px; /* 100% */
+  text-align: center;
+}
+
+.banner-multiline-title {
+  color: #5e5d5d;
+  font-family: Permanent Marker;
+  font-size: 44.1px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 63px; /* 142.857% */
+}
+
+.banner-success-title {
+  color: #5e5d5d;
+  text-align: right;
+  font-family: Permanent Marker;
+  font-size: 44.1px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 63px; /* 142.857% */
+}
+
+.banner-container {
+  display: flex;
+  width: 896px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 6px;
+  background: #ecfdf5;
+  color: green;
+}
+
+.banner-container-title {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+
+.banner-container-text {
+  align-self: stretch;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
 }
 
 .badge {
