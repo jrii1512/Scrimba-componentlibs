@@ -5,18 +5,19 @@ export default function Banners() {
   const types = ["success", "warning", "error", "neutral"];
 
   return (
-    <div className="banners">
-      <h1 className="banner-title">Banners</h1>
-      <h3 className="banner-multiline">Text and title</h3>
+    <section id="banner" className="banner-container">
+      <div className="titles-containers">
+        <h1 className="title banners-title">BANNERS</h1>
+        <h3 className="title multiline-title">MULTI LINE</h3>
+        <h3 className="title singleline-title">SINGLE LINE</h3>
+      </div>
 
       <div className="multiline-banners">
         {types.map((type) => (
           <div className="banner-container">
-            <h3 classnName="title banner-containter-title">
-              {type.toUpperCase()}
-            </h3>
+            <h3 classnName="title type-title">{type.toUpperCase()}</h3>
             <Banner className="mult" type={type}>
-              <div className="banner-container-text">
+              <div className="banner-children">
                 <h5>
                   {type === "success"
                     ? "Congratulation"
@@ -28,12 +29,32 @@ export default function Banners() {
                     ? "It is ok ... really is"
                     : ""}
                 </h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquid pariatur, ipsum similique veniam quo totam eius
+                  aperiam dolorum.
+                </p>
+              </div>
+            </Banner>
+
+            <Banner className="single" type={type}>
+              <div className="banner-children">
+                <h5>
+                  {type === "success"
+                    ? "All good bro"
+                    : type === "warning"
+                    ? "Ouhhh"
+                    : type === "error"
+                    ? "Sorry bro, its not go."
+                    : type === "neutral"
+                    ? "Neutral"
+                    : ""}
+                </h5>
               </div>
             </Banner>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

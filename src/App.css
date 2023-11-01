@@ -54,6 +54,61 @@ h3.title {
   grid-area: square--badges;
 }
 
+/*Banners*/
+.banner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: #EFF6FF;
+  min-width: 200px;
+  width: 100%;
+}
+
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.banner-container:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+.banners-title {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  justify-self: center;
+}
+
+.multiline-title {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  justify-self: center;
+}
+
+.banner-children p {
+  font-weight: 400;
+  color: #1C51B9;
+}
+
+.banner>svg {
+  min-width: 16px;
+  min-height: 16px;
+  color: #60A5FA;
+}
+
+.titles-container>h3 {
+  display: none;
+}
+
+.singleline-title {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  justify-self: center;
+}
+
 .banner-title {
   color: #000;
   font-family: Permanent Marker;
@@ -110,6 +165,67 @@ h3.title {
   font-weight: 400;
   line-height: 20px; /* 142.857% */
 }
+
+/* Banner Variants */
+
+/* Success */
+.banner.success {
+  background-color: #ECFDF5;
+}
+
+.banner.success h5 {
+  color: #065F46;
+}
+
+.banner.success p {
+  color: #047857;
+}
+
+.banner.success>svg {
+  color: #34D399;
+}
+
+/* Warning */
+.banner.warning {
+  background-color: #FFFBEB;
+}
+
+.banner.warning h5 {
+  color: #92400E;
+}
+
+.banner.warning p {
+  color: #B45309;
+}
+
+.banner.warning>svg {
+  color: #FBBF24;
+}
+
+/* Error */
+.banner.error {
+  background-color: #FEF2F2;
+}
+
+.banner.error h5 {
+  color: #92400E;
+}
+
+.banner.error p {
+  color: #B45309;
+}
+
+.banner.error>svg {
+  color: #F87171;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
 
 .badge {
   display: flex;
