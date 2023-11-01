@@ -296,7 +296,7 @@ div.card-container {
 
 .card {
   padding: 56px 24px 32px;
-  background: #f9fafb;
+  background-color: #f9fafb;
   border-radius: 8px;
   border: 2px solid #ffffff;
   text-align: center;
